@@ -33,17 +33,17 @@ Python Django (3.2.6 LTS) 프레임워크를 활용해 빠르게 서버를 띄�
 ```
 Django==3.2.6
 djangorestframework==3.12.4
-django-cors-headers==3.7.0
+django-cors-headers==3.10.0
 pyyaml
-Pillow==8.3.1  # 이미지 처리 예시를 위한 라이브러리
-pandas==1.3.1  # CSV 처리 예시를 위한 라이브러리
-numpy==1.20.3
+Pillow==8.3.2  # 이미지 처리 예시를 위한 라이브러리
+pandas==1.4.0  # CSV 처리 예시를 위한 라이브러리
+numpy==1.22.2
 ```
 
 ### Skeleton
 
 ```
-└── django-tutorial
+└── django-template
     ├── /api
     │   ├── /migrations
     │   │
@@ -56,7 +56,7 @@ numpy==1.20.3
     │   ├── admin.py
     │   ├── apps.py
     │   ├── models.py
-    │   ├── response.py
+!   │   ├── response.py
     │   ├── tests.py
     │   ├── urls.py
     │   └── views.py
@@ -74,7 +74,7 @@ numpy==1.20.3
     │   ├── /media
     │   └── /static
     │
-    ├── /nameless_server
+!   ├── /nameless_server
     │   ├── __init__.py
     │   ├── asgi.py
     │   ├── logger_config.py
@@ -105,6 +105,8 @@ Repository 에는 다음과 같이 `*` 표시된 경로 & 파일들이 빠져있
 - Main Project Name 인 settings.py 가 있는 폴더의 이름 (현재는 `/nameless_server`) 은 environments.yaml 에 작성된 server name 과 동일해야 합니다.
   
   프로젝트 이름을 커스텀하려면 environments.yaml 에 작성된 Project Name 을 변경한 뒤, IDE 를 활용해 `nameless_server` 를 모두 찾아 변경하는것을 권장합니다
+
+- 프로젝트의 이름에 따라 `/api/response.py` 파일에 작성된 Response Class (탬플릿에선 `NamelessServer_Response`) 의 이름을 변경하는 것을 권장합니다.
 
 ---
 
